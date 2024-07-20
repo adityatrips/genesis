@@ -21,22 +21,31 @@ export default function Component() {
 	return (
 		<div className='grid min-h-screen w-full overflow-hidden'>
 			<div className='flex flex-col'>
-				<header className='flex h-14 lg:h-[60px] items-center justify-between gap-4 w-full border-b bg-muted/40 px-6'>
+				<header className='bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between lg:h-[60px] h-14'>
 					<Link
 						href='/'
+						className='flex items-center gap-2'
 						prefetch={false}
-						className='flex gap-2 items-center justify-center'
 					>
-						<TruckIcon className='h-6 w-6' />
-						<span>Home</span>
+						<TruckIcon className='w-6 h-6' />
+						<span className='text-xl font-bold'>BlockchainShipping</span>
 					</Link>
-					<div className='flex-[1] hidden md:block'>
-						<Input
-							type='search'
-							placeholder='Search shipments'
-							className='bg-background shadow-none appearance-none pl-8 md:w-2/3 lg:w-1/3 w-1/2'
-						/>
-					</div>
+					<nav className='hidden md:flex items-center gap-6'>
+						<Link
+							href='/shipments'
+							className='hover:underline'
+							prefetch={false}
+						>
+							Shipments
+						</Link>
+						<Link
+							href='/verify'
+							className='hover:underline'
+							prefetch={false}
+						>
+							Verify
+						</Link>
+					</nav>
 				</header>
 				<main className='flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6'>
 					<div className='flex items-center gap-4'>

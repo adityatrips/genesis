@@ -33,7 +33,7 @@ import { Badge } from '@/components/ui/badge';
 export default function Component() {
 	return (
 		<div className='flex flex-col min-h-screen'>
-			<header className='bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between'>
+			<header className='bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between lg:h-[60px] h-14'>
 				<Link
 					href='/'
 					className='flex items-center gap-2'
@@ -58,40 +58,6 @@ export default function Component() {
 						Verify
 					</Link>
 				</nav>
-				<div className='flex items-center gap-4'>
-					<Button
-						variant='outline'
-						size='icon'
-						className='md:hidden'
-					>
-						<MenuIcon className='w-5 h-5' />
-					</Button>
-					<DropdownMenu>
-						<DropdownMenuTrigger asChild>
-							<Button
-								variant='outline'
-								size='icon'
-								className='overflow-hidden rounded-full'
-							>
-								<img
-									src='/placeholder.svg'
-									width={36}
-									height={36}
-									alt='Avatar'
-									className='overflow-hidden rounded-full'
-								/>
-							</Button>
-						</DropdownMenuTrigger>
-						<DropdownMenuContent align='end'>
-							<DropdownMenuLabel>John Doe</DropdownMenuLabel>
-							<DropdownMenuSeparator />
-							<DropdownMenuItem>Profile</DropdownMenuItem>
-							<DropdownMenuItem>Settings</DropdownMenuItem>
-							<DropdownMenuSeparator />
-							<DropdownMenuItem>Logout</DropdownMenuItem>
-						</DropdownMenuContent>
-					</DropdownMenu>
-				</div>
 			</header>
 			<main className='flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6'>
 				<Card>

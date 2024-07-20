@@ -17,13 +17,31 @@ export default function Component() {
 
 	return (
 		<div className='flex flex-col min-h-screen bg-background'>
-			<header className='bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between'>
+			<header className='bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between lg:h-[60px] h-14'>
 				<Link
 					href='/'
-					className='text-2xl font-bold'
+					className='flex items-center gap-2'
+					prefetch={false}
 				>
-					Home
+					<TruckIcon className='w-6 h-6' />
+					<span className='text-xl font-bold'>BlockchainShipping</span>
 				</Link>
+				<nav className='hidden md:flex items-center gap-6'>
+					<Link
+						href='/shipments'
+						className='hover:underline'
+						prefetch={false}
+					>
+						Shipments
+					</Link>
+					<Link
+						href='/verify'
+						className='hover:underline'
+						prefetch={false}
+					>
+						Verify
+					</Link>
+				</nav>
 			</header>
 			<main
 				className={`flex-1 grid grid-cols-1 p-6 md:p-10 gap-8 ${
