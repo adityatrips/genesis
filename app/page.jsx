@@ -1,16 +1,11 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/6gwJndl3s5W
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
 	DropdownMenu,
 	DropdownMenuTrigger,
 	DropdownMenuContent,
-	DropdownMenuLabel,
-	DropdownMenuSeparator,
 	DropdownMenuItem,
 } from '@/components/ui/dropdown-menu';
 import {
@@ -30,7 +25,7 @@ import {
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 
-export default function Component() {
+export default function HomePage() {
 	return (
 		<div className='flex flex-col min-h-screen'>
 			<header className='bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between lg:h-[60px] h-14'>
@@ -285,42 +280,6 @@ function CalendarIcon(props) {
 	);
 }
 
-function MenuIcon(props) {
-	return (
-		<svg
-			{...props}
-			xmlns='http://www.w3.org/2000/svg'
-			width='24'
-			height='24'
-			viewBox='0 0 24 24'
-			fill='none'
-			stroke='currentColor'
-			strokeWidth='2'
-			strokeLinecap='round'
-			strokeLinejoin='round'
-		>
-			<line
-				x1='4'
-				x2='20'
-				y1='12'
-				y2='12'
-			/>
-			<line
-				x1='4'
-				x2='20'
-				y1='6'
-				y2='6'
-			/>
-			<line
-				x1='4'
-				x2='20'
-				y1='18'
-				y2='18'
-			/>
-		</svg>
-	);
-}
-
 function MoveHorizontalIcon(props) {
 	return (
 		<svg
@@ -432,26 +391,6 @@ function TruckIcon(props) {
 				cy='18'
 				r='2'
 			/>
-		</svg>
-	);
-}
-
-function XIcon(props) {
-	return (
-		<svg
-			{...props}
-			xmlns='http://www.w3.org/2000/svg'
-			width='24'
-			height='24'
-			viewBox='0 0 24 24'
-			fill='none'
-			stroke='currentColor'
-			strokeWidth='2'
-			strokeLinecap='round'
-			strokeLinejoin='round'
-		>
-			<path d='M18 6 6 18' />
-			<path d='m6 6 12 12' />
 		</svg>
 	);
 }
